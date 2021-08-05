@@ -290,58 +290,6 @@ endif
 " }}}
 " }}}
 " Extended File Types: {{{
-" Markdown: {{{
-" builtin: {{{
-call s:HL('markdownH1', s:palette.red, s:palette.none, 'bold')
-call s:HL('markdownH2', s:palette.orange, s:palette.none, 'bold')
-call s:HL('markdownH3', s:palette.yellow, s:palette.none, 'bold')
-call s:HL('markdownH4', s:palette.green, s:palette.none, 'bold')
-call s:HL('markdownH5', s:palette.blue, s:palette.none, 'bold')
-call s:HL('markdownH6', s:palette.purple, s:palette.none, 'bold')
-call s:HL('markdownUrl', s:palette.blue, s:palette.none, 'underline')
-call s:HL('markdownItalic', s:palette.none, s:palette.none, 'italic')
-call s:HL('markdownBold', s:palette.none, s:palette.none, 'bold')
-call s:HL('markdownItalicDelimiter', s:palette.grey, s:palette.none, 'italic')
-highlight! link markdownCode Green
-highlight! link markdownCodeBlock Cyan
-highlight! link markdownCodeDelimiter Cyan
-highlight! link markdownBlockquote Grey
-highlight! link markdownListMarker Red
-highlight! link markdownOrderedListMarker Red
-highlight! link markdownRule Purple
-highlight! link markdownHeadingRule Grey
-highlight! link markdownUrlDelimiter Grey
-highlight! link markdownLinkDelimiter Grey
-highlight! link markdownLinkTextDelimiter Grey
-highlight! link markdownHeadingDelimiter Grey
-highlight! link markdownLinkText Purple
-highlight! link markdownUrlTitleDelimiter Green
-highlight! link markdownIdDeclaration markdownLinkText
-highlight! link markdownBoldDelimiter Grey
-highlight! link markdownId Yellow
-" }}}
-" vim-markdown: https://github.com/gabrielelana/vim-markdown{{{
-call s:HL('mkdURL', s:palette.blue, s:palette.none, 'underline')
-call s:HL('mkdInlineURL', s:palette.purple, s:palette.none, 'underline')
-call s:HL('mkdItalic', s:palette.grey, s:palette.none, 'italic')
-highlight! link mkdCodeDelimiter Cyan
-highlight! link mkdBold Grey
-highlight! link mkdLink Purple
-highlight! link mkdHeading Grey
-highlight! link mkdListItem Red
-highlight! link mkdRule Purple
-highlight! link mkdDelimiter Grey
-highlight! link mkdId Yellow
-" }}}
-" }}}
-" ReStructuredText: {{{
-" builtin: https://github.com/marshallward/vim-restructuredtext{{{
-call s:HL('rstStandaloneHyperlink', s:palette.purple, s:palette.none, 'underline')
-highlight! link rstSubstitutionReference Blue
-highlight! link rstInterpretedTextOrHyperlinkReference Cyan
-highlight! link rstTableLines Grey
-" }}}
-" }}}
 " LaTex: {{{
 " builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_TEX{{{
 highlight! link texStatement Green
@@ -461,24 +409,6 @@ highlight! link lessClass RedItalic
 highlight! link lessVariable Blue
 highlight! link lessAmpersandChar Orange
 highlight! link lessFunction Yellow
-" }}}
-" }}}
-" CoffeeScript: {{{
-" vim-coffee-script: https://github.com/kchmck/vim-coffee-script{{{
-highlight! link coffeeExtendedOp Orange
-highlight! link coffeeSpecialOp Fg
-highlight! link coffeeDotAccess Grey
-highlight! link coffeeCurly Fg
-highlight! link coffeeParen Fg
-highlight! link coffeeBracket Fg
-highlight! link coffeeParens Blue
-highlight! link coffeeBrackets Blue
-highlight! link coffeeCurlies Blue
-highlight! link coffeeOperator RedItalic
-highlight! link coffeeStatement Orange
-highlight! link coffeeSpecialIdent Purple
-highlight! link coffeeObject Purple
-highlight! link coffeeObjAssign Cyan
 " }}}
 " }}}
 " C/C++: {{{
@@ -681,28 +611,6 @@ highlight! link podVerbatimLine Green
 highlight! link podCmdText Yellow
 " }}}
 " }}}
-" OCaml: {{{
-" builtin: https://github.com/rgrinberg/vim-ocaml{{{
-highlight! link ocamlArrow Orange
-highlight! link ocamlEqual Orange
-highlight! link ocamlOperator Orange
-highlight! link ocamlKeyChar Orange
-highlight! link ocamlModPath Green
-highlight! link ocamlFullMod Green
-highlight! link ocamlModule Purple
-highlight! link ocamlConstructor Cyan
-highlight! link ocamlFuncWith Yellow
-highlight! link ocamlWith Yellow
-highlight! link ocamlModParam Fg
-highlight! link ocamlModParam1 Fg
-highlight! link ocamlAnyVar Blue
-highlight! link ocamlPpxEncl Orange
-highlight! link ocamlPpxIdentifier Blue
-highlight! link ocamlSigEncl Orange
-highlight! link ocamlStructEncl Cyan
-highlight! link ocamlModParam1 Blue
-" }}}
-" }}}
 " Erlang: {{{
 " builtin: https://github.com/vim-erlang/vim-erlang-runtime{{{
 highlight! link erlangAtom Cyan
@@ -712,34 +620,6 @@ highlight! link erlangGlobalFuncRef Green
 highlight! link erlangGlobalFuncCall Green
 highlight! link erlangAttribute PurpleItalic
 highlight! link erlangPipe Orange
-" }}}
-" }}}
-" Elixir: {{{
-" vim-elixir: https://github.com/elixir-editors/vim-elixir{{{
-highlight! link elixirStringDelimiter Green
-highlight! link elixirKeyword Orange
-highlight! link elixirInterpolation Yellow
-highlight! link elixirInterpolationDelimiter Yellow
-highlight! link elixirSelf Purple
-highlight! link elixirPseudoVariable Purple
-highlight! link elixirModuleDefine PurpleItalic
-highlight! link elixirBlockDefinition RedItalic
-highlight! link elixirDefine RedItalic
-highlight! link elixirPrivateDefine RedItalic
-highlight! link elixirGuard RedItalic
-highlight! link elixirPrivateGuard RedItalic
-highlight! link elixirProtocolDefine RedItalic
-highlight! link elixirImplDefine RedItalic
-highlight! link elixirRecordDefine RedItalic
-highlight! link elixirPrivateRecordDefine RedItalic
-highlight! link elixirMacroDefine RedItalic
-highlight! link elixirPrivateMacroDefine RedItalic
-highlight! link elixirDelegateDefine RedItalic
-highlight! link elixirOverridableDefine RedItalic
-highlight! link elixirExceptionDefine RedItalic
-highlight! link elixirCallbackDefine RedItalic
-highlight! link elixirStructDefine RedItalic
-highlight! link elixirExUnitMacro RedItalic
 " }}}
 " }}}
 " Common Lisp: {{{
