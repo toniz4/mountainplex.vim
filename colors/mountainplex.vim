@@ -7,38 +7,38 @@ set background=dark
 
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 
-let g:colors_name = 'mountaineer-light'
+let g:colors_name = 'mountainplex'
 " }}}
 " Configuration: {{{
 let s:configuration = {}
-let s:configuration.palette = get(g:, 'mountaineer-light_palette', 'soft')
-let s:configuration.transparent_background = get(g:, 'mountaineer-light_transparent_background', 0)
-let s:configuration.disable_italic_comment = get(g:, 'mountaineer-light_disable_italic_comment', 0)
-let s:configuration.enable_italic = get(g:, 'mountaineer-light_enable_italic', 0)
-let s:configuration.cursor = get(g:, 'mountaineer-light_cursor', 'auto')
-let s:configuration.current_word = get(g:, 'mountaineer-light_current_word', get(g:, 'mountaineer-light_transparent_background', 0) == 0 ? 'grey background' : 'bold')
+let s:configuration.palette = get(g:, 'mountaineer_palette', 'soft')
+let s:configuration.transparent_background = get(g:, 'mountaineer_transparent_background', 0)
+let s:configuration.disable_italic_comment = get(g:, 'mountaineer_disable_italic_comment', 0)
+let s:configuration.enable_italic = get(g:, 'mountaineer_enable_italic', 0)
+let s:configuration.cursor = get(g:, 'mountaineer_cursor', 'auto')
+let s:configuration.current_word = get(g:, 'mountaineer_current_word', get(g:, 'mountaineer_transparent_background', 0) == 0 ? 'grey background' : 'bold')
 " }}}
 " Palette: {{{
 let s:palette = {
-      \ 'bg0':        ['#f0f0f0',   '235',  'Black'],
-      \ 'bg1':        ['#d3d3d3',   '236',  'DarkGrey'],
-      \ 'bg2':        ['#d3d3d3',   '237',  'DarkGrey'],
-      \ 'bg3':        ['#f0f0f0',   '238',  'DarkGrey'],
-      \ 'bg4':        ['#f0f0f0',   '239',  'Grey'],
-      \ 'bg_red':     ['#d3d3d3',   '52',   'DarkRed'],
-      \ 'bg_green':   ['#d3d3d3',   '22',   'DarkGreen'],
-      \ 'bg_blue':    ['#d3d3d3',   '17',   'DarkBlue'],
-      \ 'fg':         ['#2c2c2c',   '223',  'White'],
-      \ 'red':        ['#735B60',   '167',  'Red'],
-      \ 'orange':     ['#73685B',   '208',  'Red'],
-      \ 'yellow':     ['#73705B',   '214',  'Yellow'],
-      \ 'green':      ['#5B735C',   '108',  'Green'],
-      \ 'cyan':       ['#5B7273',   '108',  'Cyan'],
-      \ 'blue':       ['#5F5B73',   '109',  'Blue'],
-      \ 'purple':     ['#735B73',   '175',  'Magenta'],
-      \ 'grey':       ['#a2a2a2',   '245',  'LightGrey'],
-      \ 'light_grey': ['#a2a2a2',   '245',  'LightGrey'],
-      \ 'gold':       ['#7a7a7a',   '214',  'Yellow'],
+      \ 'bg0':        ['#050505',   '235',  'Black'],
+      \ 'bg1':        ['#0f0f0f',   '236',  'DarkGrey'],
+      \ 'bg2':        ['#0f0f0f',   '237',  'DarkGrey'],
+      \ 'bg3':        ['#050505',   '238',  'DarkGrey'],
+      \ 'bg4':        ['#050505',   '239',  'Grey'],
+      \ 'bg_red':     ['#0f0f0f',   '52',   'DarkRed'],
+      \ 'bg_green':   ['#222222',   '22',   'DarkGreen'],
+      \ 'bg_blue':    ['#0f0f0f',   '17',   'DarkBlue'],
+      \ 'fg':         ['#f0f0f0',   '223',  'White'],
+      \ 'red':        ['#AC8A8C',   '167',  'Red'],
+      \ 'orange':     ['#AC9D8A',   '208',  'Red'],
+      \ 'yellow':     ['#ACA98A',   '214',  'Yellow'],
+      \ 'green':      ['#8AAC8B',   '108',  'Green'],
+      \ 'cyan':       ['#8AABAC',   '108',  'Cyan'],
+      \ 'blue':       ['#8F8AAC',   '109',  'Blue'],
+      \ 'purple':     ['#AC8AAC',   '175',  'Magenta'],
+      \ 'grey':       ['#363636',   '245',  'LightGrey'],
+      \ 'light_grey': ['#363636',   '245',  'LightGrey'],
+      \ 'gold':       ['#2f4243',   '214',  'Yellow'],
       \ 'none':       ['NONE',      'NONE', 'NONE']
       \ }
 " }}}
@@ -463,360 +463,6 @@ highlight! link lessAmpersandChar Orange
 highlight! link lessFunction Yellow
 " }}}
 " }}}
-" JavaScript: {{{
-" builtin: http://www.fleiner.com/vim/syntax/javascript.vim{{{
-highlight! link javaScriptNull Cyan
-highlight! link javaScriptIdentifier Orange
-highlight! link javaScriptParens Fg
-highlight! link javaScriptBraces Fg
-highlight! link javaScriptGlobal Purple
-highlight! link javaScriptMessage Yellow
-highlight! link javaScriptFunction RedItalic
-highlight! link javaScriptOperator Orange
-highlight! link javaScriptMember Cyan
-" }}}
-" vim-javascript: https://github.com/pangloss/vim-javascript{{{
-highlight! link jsThis Purple
-highlight! link jsUndefined Cyan
-highlight! link jsNull Cyan
-highlight! link jsNan Cyan
-highlight! link jsSuper Purple
-highlight! link jsPrototype Purple
-highlight! link jsFunction RedItalic
-highlight! link jsGlobalNodeObjects PurpleItalic
-highlight! link jsGlobalObjects Yellow
-highlight! link jsArrowFunction Purple
-highlight! link jsArrowFuncArgs Blue
-highlight! link jsFuncArgs Blue
-highlight! link jsObjectProp Cyan
-highlight! link jsVariableDef Blue
-highlight! link jsObjectKey Cyan
-highlight! link jsParen Blue
-highlight! link jsParenIfElse Blue
-highlight! link jsParenRepeat Blue
-highlight! link jsParenSwitch Blue
-highlight! link jsParenCatch Blue
-highlight! link jsBracket Blue
-highlight! link jsBlockLabel Cyan
-highlight! link jsFunctionKey Green
-highlight! link jsClassDefinition Yellow
-highlight! link jsDot Grey
-highlight! link jsDestructuringBlock Blue
-highlight! link jsSpreadExpression Purple
-highlight! link jsSpreadOperator Green
-highlight! link jsModuleKeyword Yellow
-highlight! link jsObjectValue Blue
-highlight! link jsTemplateExpression LightGray
-highlight! link jsTemplateBraces Yellow
-highlight! link jsClassMethodType Orange
-" }}}
-" yajs: https://github.com/othree/yajs.vim{{{
-highlight! link javascriptEndColons Fg
-highlight! link javascriptOpSymbol Orange
-highlight! link javascriptOpSymbols Orange
-highlight! link javascriptIdentifierName Blue
-highlight! link javascriptVariable Orange
-highlight! link javascriptObjectLabel Cyan
-highlight! link javascriptObjectLabelColon Grey
-highlight! link javascriptPropertyNameString Cyan
-highlight! link javascriptFuncArg Blue
-highlight! link javascriptIdentifier Purple
-highlight! link javascriptArrowFunc Purple
-highlight! link javascriptTemplate Yellow
-highlight! link javascriptTemplateSubstitution Yellow
-highlight! link javascriptTemplateSB Yellow
-highlight! link javascriptNodeGlobal PurpleItalic
-highlight! link javascriptDocTags PurpleItalic
-highlight! link javascriptDocNotation Purple
-highlight! link javascriptClassSuper Purple
-highlight! link javascriptClassName Yellow
-highlight! link javascriptClassSuperName Yellow
-highlight! link javascriptBrackets Fg
-highlight! link javascriptBraces Fg
-highlight! link javascriptLabel Purple
-highlight! link javascriptDotNotation Grey
-highlight! link javascriptGlobalArrayDot Grey
-highlight! link javascriptGlobalBigIntDot Grey
-highlight! link javascriptGlobalDateDot Grey
-highlight! link javascriptGlobalJSONDot Grey
-highlight! link javascriptGlobalMathDot Grey
-highlight! link javascriptGlobalNumberDot Grey
-highlight! link javascriptGlobalObjectDot Grey
-highlight! link javascriptGlobalPromiseDot Grey
-highlight! link javascriptGlobalRegExpDot Grey
-highlight! link javascriptGlobalStringDot Grey
-highlight! link javascriptGlobalSymbolDot Grey
-highlight! link javascriptGlobalURLDot Grey
-highlight! link javascriptMethod Green
-highlight! link javascriptMethodName Green
-highlight! link javascriptObjectMethodName Green
-highlight! link javascriptGlobalMethod Green
-highlight! link javascriptDOMStorageMethod Green
-highlight! link javascriptFileMethod Green
-highlight! link javascriptFileReaderMethod Green
-highlight! link javascriptFileListMethod Green
-highlight! link javascriptBlobMethod Green
-highlight! link javascriptURLStaticMethod Green
-highlight! link javascriptNumberStaticMethod Green
-highlight! link javascriptNumberMethod Green
-highlight! link javascriptDOMNodeMethod Green
-highlight! link javascriptES6BigIntStaticMethod Green
-highlight! link javascriptBOMWindowMethod Green
-highlight! link javascriptHeadersMethod Green
-highlight! link javascriptRequestMethod Green
-highlight! link javascriptResponseMethod Green
-highlight! link javascriptES6SetMethod Green
-highlight! link javascriptReflectMethod Green
-highlight! link javascriptPaymentMethod Green
-highlight! link javascriptPaymentResponseMethod Green
-highlight! link javascriptTypedArrayStaticMethod Green
-highlight! link javascriptGeolocationMethod Green
-highlight! link javascriptES6MapMethod Green
-highlight! link javascriptServiceWorkerMethod Green
-highlight! link javascriptCacheMethod Green
-highlight! link javascriptFunctionMethod Green
-highlight! link javascriptXHRMethod Green
-highlight! link javascriptBOMNavigatorMethod Green
-highlight! link javascriptServiceWorkerMethod Green
-highlight! link javascriptDOMEventTargetMethod Green
-highlight! link javascriptDOMEventMethod Green
-highlight! link javascriptIntlMethod Green
-highlight! link javascriptDOMDocMethod Green
-highlight! link javascriptStringStaticMethod Green
-highlight! link javascriptStringMethod Green
-highlight! link javascriptSymbolStaticMethod Green
-highlight! link javascriptRegExpMethod Green
-highlight! link javascriptObjectStaticMethod Green
-highlight! link javascriptObjectMethod Green
-highlight! link javascriptBOMLocationMethod Green
-highlight! link javascriptJSONStaticMethod Green
-highlight! link javascriptGeneratorMethod Green
-highlight! link javascriptEncodingMethod Green
-highlight! link javascriptPromiseStaticMethod Green
-highlight! link javascriptPromiseMethod Green
-highlight! link javascriptBOMHistoryMethod Green
-highlight! link javascriptDOMFormMethod Green
-highlight! link javascriptClipboardMethod Green
-highlight! link javascriptTypedArrayStaticMethod Green
-highlight! link javascriptBroadcastMethod Green
-highlight! link javascriptDateStaticMethod Green
-highlight! link javascriptDateMethod Green
-highlight! link javascriptConsoleMethod Green
-highlight! link javascriptArrayStaticMethod Green
-highlight! link javascriptArrayMethod Green
-highlight! link javascriptMathStaticMethod Green
-highlight! link javascriptSubtleCryptoMethod Green
-highlight! link javascriptCryptoMethod Green
-highlight! link javascriptProp Cyan
-highlight! link javascriptBOMWindowProp Cyan
-highlight! link javascriptDOMStorageProp Cyan
-highlight! link javascriptFileReaderProp Cyan
-highlight! link javascriptURLUtilsProp Cyan
-highlight! link javascriptNumberStaticProp Cyan
-highlight! link javascriptDOMNodeProp Cyan
-highlight! link javascriptRequestProp Cyan
-highlight! link javascriptResponseProp Cyan
-highlight! link javascriptES6SetProp Cyan
-highlight! link javascriptPaymentProp Cyan
-highlight! link javascriptPaymentResponseProp Cyan
-highlight! link javascriptPaymentAddressProp Cyan
-highlight! link javascriptPaymentShippingOptionProp Cyan
-highlight! link javascriptTypedArrayStaticProp Cyan
-highlight! link javascriptServiceWorkerProp Cyan
-highlight! link javascriptES6MapProp Cyan
-highlight! link javascriptRegExpStaticProp Cyan
-highlight! link javascriptRegExpProp Cyan
-highlight! link javascriptXHRProp Cyan
-highlight! link javascriptBOMNavigatorProp Green
-highlight! link javascriptDOMEventProp Cyan
-highlight! link javascriptBOMNetworkProp Cyan
-highlight! link javascriptDOMDocProp Cyan
-highlight! link javascriptSymbolStaticProp Cyan
-highlight! link javascriptSymbolProp Cyan
-highlight! link javascriptBOMLocationProp Cyan
-highlight! link javascriptEncodingProp Cyan
-highlight! link javascriptCryptoProp Cyan
-highlight! link javascriptBOMHistoryProp Cyan
-highlight! link javascriptDOMFormProp Cyan
-highlight! link javascriptDataViewProp Cyan
-highlight! link javascriptBroadcastProp Cyan
-highlight! link javascriptMathStaticProp Cyan
-" }}}
-" }}}
-" JavaScript React: {{{
-" vim-jsx-pretty: https://github.com/maxmellon/vim-jsx-pretty{{{
-highlight! link jsxTagName OrangeItalic
-highlight! link jsxOpenPunct Green
-highlight! link jsxClosePunct Blue
-highlight! link jsxEscapeJs Blue
-highlight! link jsxAttrib Cyan
-" }}}
-" }}}
-" TypeScript: {{{
-" vim-typescript: https://github.com/leafgarland/typescript-vim{{{
-highlight! link typescriptSource PurpleItalic
-highlight! link typescriptMessage Yellow
-highlight! link typescriptGlobalObjects Cyan
-highlight! link typescriptInterpolation Yellow
-highlight! link typescriptInterpolationDelimiter Yellow
-highlight! link typescriptBraces Fg
-highlight! link typescriptParens Fg
-" }}}
-" yats: https:github.com/HerringtonDarkholme/yats.vim{{{
-highlight! link typescriptMethodAccessor OrangeItalic
-highlight! link typescriptVariable Orange
-highlight! link typescriptVariableDeclaration Blue
-highlight! link typescriptTypeReference Yellow
-highlight! link typescriptBraces Fg
-highlight! link typescriptEnumKeyword RedItalic
-highlight! link typescriptEnum Yellow
-highlight! link typescriptIdentifierName Cyan
-highlight! link typescriptProp Cyan
-highlight! link typescriptCall Blue
-highlight! link typescriptInterfaceName Yellow
-highlight! link typescriptEndColons Fg
-highlight! link typescriptMember Cyan
-highlight! link typescriptMemberOptionality Orange
-highlight! link typescriptObjectLabel Cyan
-highlight! link typescriptArrowFunc Purple
-highlight! link typescriptAbstract Orange
-highlight! link typescriptObjectColon Grey
-highlight! link typescriptTypeAnnotation Grey
-highlight! link typescriptAssign Orange
-highlight! link typescriptBinaryOp Orange
-highlight! link typescriptUnaryOp Orange
-highlight! link typescriptFuncComma Fg
-highlight! link typescriptClassName Yellow
-highlight! link typescriptClassHeritage Yellow
-highlight! link typescriptInterfaceHeritage Yellow
-highlight! link typescriptIdentifier Purple
-highlight! link typescriptGlobal Purple
-highlight! link typescriptOperator RedItalic
-highlight! link typescriptNodeGlobal PurpleItalic
-highlight! link typescriptExport PurpleItalic
-highlight! link typescriptDefaultParam Orange
-highlight! link typescriptImport PurpleItalic
-highlight! link typescriptTypeParameter Yellow
-highlight! link typescriptReadonlyModifier Orange
-highlight! link typescriptAccessibilityModifier Orange
-highlight! link typescriptAmbientDeclaration RedItalic
-highlight! link typescriptTemplateSubstitution Yellow
-highlight! link typescriptTemplateSB Yellow
-highlight! link typescriptExceptions RedItalic
-highlight! link typescriptCastKeyword RedItalic
-highlight! link typescriptOptionalMark Orange
-highlight! link typescriptNull Cyan
-highlight! link typescriptMappedIn RedItalic
-highlight! link typescriptFuncTypeArrow Purple
-highlight! link typescriptTernaryOp Orange
-highlight! link typescriptParenExp Blue
-highlight! link typescriptIndexExpr Blue
-highlight! link typescriptDotNotation Grey
-highlight! link typescriptGlobalNumberDot Grey
-highlight! link typescriptGlobalStringDot Grey
-highlight! link typescriptGlobalArrayDot Grey
-highlight! link typescriptGlobalObjectDot Grey
-highlight! link typescriptGlobalSymbolDot Grey
-highlight! link typescriptGlobalMathDot Grey
-highlight! link typescriptGlobalDateDot Grey
-highlight! link typescriptGlobalJSONDot Grey
-highlight! link typescriptGlobalRegExpDot Grey
-highlight! link typescriptGlobalPromiseDot Grey
-highlight! link typescriptGlobalURLDot Grey
-highlight! link typescriptGlobalMethod Green
-highlight! link typescriptDOMStorageMethod Green
-highlight! link typescriptFileMethod Green
-highlight! link typescriptFileReaderMethod Green
-highlight! link typescriptFileListMethod Green
-highlight! link typescriptBlobMethod Green
-highlight! link typescriptURLStaticMethod Green
-highlight! link typescriptNumberStaticMethod Green
-highlight! link typescriptNumberMethod Green
-highlight! link typescriptDOMNodeMethod Green
-highlight! link typescriptPaymentMethod Green
-highlight! link typescriptPaymentResponseMethod Green
-highlight! link typescriptHeadersMethod Green
-highlight! link typescriptRequestMethod Green
-highlight! link typescriptResponseMethod Green
-highlight! link typescriptES6SetMethod Green
-highlight! link typescriptReflectMethod Green
-highlight! link typescriptBOMWindowMethod Green
-highlight! link typescriptGeolocationMethod Green
-highlight! link typescriptServiceWorkerMethod Green
-highlight! link typescriptCacheMethod Green
-highlight! link typescriptES6MapMethod Green
-highlight! link typescriptFunctionMethod Green
-highlight! link typescriptRegExpMethod Green
-highlight! link typescriptXHRMethod Green
-highlight! link typescriptBOMNavigatorMethod Green
-highlight! link typescriptServiceWorkerMethod Green
-highlight! link typescriptIntlMethod Green
-highlight! link typescriptDOMEventTargetMethod Green
-highlight! link typescriptDOMEventMethod Green
-highlight! link typescriptDOMDocMethod Green
-highlight! link typescriptStringStaticMethod Green
-highlight! link typescriptStringMethod Green
-highlight! link typescriptSymbolStaticMethod Green
-highlight! link typescriptObjectStaticMethod Green
-highlight! link typescriptObjectMethod Green
-highlight! link typescriptJSONStaticMethod Green
-highlight! link typescriptEncodingMethod Green
-highlight! link typescriptBOMLocationMethod Green
-highlight! link typescriptPromiseStaticMethod Green
-highlight! link typescriptPromiseMethod Green
-highlight! link typescriptSubtleCryptoMethod Green
-highlight! link typescriptCryptoMethod Green
-highlight! link typescriptBOMHistoryMethod Green
-highlight! link typescriptDOMFormMethod Green
-highlight! link typescriptConsoleMethod Green
-highlight! link typescriptDateStaticMethod Green
-highlight! link typescriptDateMethod Green
-highlight! link typescriptArrayStaticMethod Green
-highlight! link typescriptArrayMethod Green
-highlight! link typescriptMathStaticMethod Green
-highlight! link typescriptStringProperty Cyan
-highlight! link typescriptDOMStorageProp Cyan
-highlight! link typescriptFileReaderProp Cyan
-highlight! link typescriptURLUtilsProp Cyan
-highlight! link typescriptNumberStaticProp Cyan
-highlight! link typescriptDOMNodeProp Cyan
-highlight! link typescriptBOMWindowProp Cyan
-highlight! link typescriptRequestProp Cyan
-highlight! link typescriptResponseProp Cyan
-highlight! link typescriptPaymentProp Cyan
-highlight! link typescriptPaymentResponseProp Cyan
-highlight! link typescriptPaymentAddressProp Cyan
-highlight! link typescriptPaymentShippingOptionProp Cyan
-highlight! link typescriptES6SetProp Cyan
-highlight! link typescriptServiceWorkerProp Cyan
-highlight! link typescriptES6MapProp Cyan
-highlight! link typescriptRegExpStaticProp Cyan
-highlight! link typescriptRegExpProp Cyan
-highlight! link typescriptBOMNavigatorProp Green
-highlight! link typescriptXHRProp Cyan
-highlight! link typescriptDOMEventProp Cyan
-highlight! link typescriptDOMDocProp Cyan
-highlight! link typescriptBOMNetworkProp Cyan
-highlight! link typescriptSymbolStaticProp Cyan
-highlight! link typescriptEncodingProp Cyan
-highlight! link typescriptBOMLocationProp Cyan
-highlight! link typescriptCryptoProp Cyan
-highlight! link typescriptDOMFormProp Cyan
-highlight! link typescriptBOMHistoryProp Cyan
-highlight! link typescriptMathStaticProp Cyan
-" }}}
-" }}}
-" Dart: {{{
-" dart-lang: https://github.com/dart-lang/dart-vim-plugin{{{
-highlight! link dartCoreClasses Cyan
-highlight! link dartTypeName Cyan
-highlight! link dartInterpolation Blue
-highlight! link dartTypeDef RedItalic
-highlight! link dartClassDecl RedItalic
-highlight! link dartLibrary PurpleItalic
-highlight! link dartMetadata Blue
-" }}}
-" }}}
 " CoffeeScript: {{{
 " vim-coffee-script: https://github.com/kchmck/vim-coffee-script{{{
 highlight! link coffeeExtendedOp Orange
@@ -833,19 +479,6 @@ highlight! link coffeeStatement Orange
 highlight! link coffeeSpecialIdent Purple
 highlight! link coffeeObject Purple
 highlight! link coffeeObjAssign Cyan
-" }}}
-" }}}
-" PureScript: {{{
-" purescript-vim: https://github.com/purescript-contrib/purescript-vim{{{
-highlight! link purescriptModuleKeyword PurpleItalic
-highlight! link purescriptModule Cyan
-highlight! link purescriptModuleParams Blue
-highlight! link purescriptAsKeyword OrangeItalic
-highlight! link purescriptHidingKeyword OrangeItalic
-highlight! link purescriptWhere OrangeItalic
-highlight! link purescriptIdentifier Blue
-highlight! link purescriptFunction Yellow
-highlight! link purescriptType Cyan
 " }}}
 " }}}
 " C/C++: {{{
@@ -932,17 +565,6 @@ highlight! link luaEllipsis Orange
 highlight! link luaDocTag Green
 " }}}
 " }}}
-" Moonscript: {{{
-" moonscript-vim: https://github.com/leafo/moonscript-vim{{{
-highlight! link moonInterpDelim Yellow
-highlight! link moonInterp Blue
-highlight! link moonFunction Green
-highlight! link moonLuaFunc Cyan
-highlight! link moonSpecialVar Purple
-highlight! link moonObject Yellow
-highlight! link moonDotAccess Grey
-" }}}
-" }}}
 " Java: {{{
 " builtin: {{{
 highlight! link javaClassDecl RedItalic
@@ -1016,26 +638,6 @@ highlight! link swiftInterpolatedString Blue
 highlight! link swiftProperty Cyan
 highlight! link swiftTypeDeclaration Orange
 highlight! link swiftClosureArgument Purple
-" }}}
-" }}}
-" PHP: {{{
-" builtin: https://jasonwoof.com/gitweb/?p=vim-syntax.git;a=blob;f=php.vim;hb=HEAD{{{
-highlight! link phpVarSelector Blue
-highlight! link phpDefine OrangeItalic
-highlight! link phpStructure RedItalic
-highlight! link phpSpecialFunction Green
-highlight! link phpInterpSimpleCurly Yellow
-highlight! link phpComparison Orange
-highlight! link phpMethodsVar Cyan
-highlight! link phpMemberSelector Green
-" }}}
-" php.vim: https://github.com/StanAngeloff/php.vim{{{
-highlight! link phpParent Fg
-highlight! link phpNowDoc Green
-highlight! link phpFunction Green
-highlight! link phpMethod Green
-highlight! link phpClass Orange
-highlight! link phpSuperglobals Purple
 " }}}
 " }}}
 " Ruby: {{{
@@ -1197,14 +799,6 @@ highlight! link fishLabel RedItalic
 highlight! link fishCommandSub Yellow
 " }}}
 " }}}
-" PowerShell: {{{
-" vim-ps1: https://github.com/PProvost/vim-ps1{{{
-highlight! link ps1FunctionInvocation Cyan
-highlight! link ps1FunctionDeclaration Cyan
-highlight! link ps1InterpolationDelimiter Yellow
-highlight! link ps1BuiltIn Yellow
-" }}}
-" }}}
 " VimL: {{{
 highlight! link vimLet Orange
 highlight! link vimFunction Green
@@ -1231,112 +825,6 @@ highlight! link makeIdent Cyan
 highlight! link makeSpecTarget Yellow
 highlight! link makeTarget Blue
 highlight! link makeCommands Orange
-" }}}
-" CMake: {{{
-highlight! link cmakeCommand Orange
-highlight! link cmakeKWconfigure_package_config_file Yellow
-highlight! link cmakeKWwrite_basic_package_version_file Yellow
-highlight! link cmakeKWExternalProject Cyan
-highlight! link cmakeKWadd_compile_definitions Cyan
-highlight! link cmakeKWadd_compile_options Cyan
-highlight! link cmakeKWadd_custom_command Cyan
-highlight! link cmakeKWadd_custom_target Cyan
-highlight! link cmakeKWadd_definitions Cyan
-highlight! link cmakeKWadd_dependencies Cyan
-highlight! link cmakeKWadd_executable Cyan
-highlight! link cmakeKWadd_library Cyan
-highlight! link cmakeKWadd_link_options Cyan
-highlight! link cmakeKWadd_subdirectory Cyan
-highlight! link cmakeKWadd_test Cyan
-highlight! link cmakeKWbuild_command Cyan
-highlight! link cmakeKWcmake_host_system_information Cyan
-highlight! link cmakeKWcmake_minimum_required Cyan
-highlight! link cmakeKWcmake_parse_arguments Cyan
-highlight! link cmakeKWcmake_policy Cyan
-highlight! link cmakeKWconfigure_file Cyan
-highlight! link cmakeKWcreate_test_sourcelist Cyan
-highlight! link cmakeKWctest_build Cyan
-highlight! link cmakeKWctest_configure Cyan
-highlight! link cmakeKWctest_coverage Cyan
-highlight! link cmakeKWctest_memcheck Cyan
-highlight! link cmakeKWctest_run_script Cyan
-highlight! link cmakeKWctest_start Cyan
-highlight! link cmakeKWctest_submit Cyan
-highlight! link cmakeKWctest_test Cyan
-highlight! link cmakeKWctest_update Cyan
-highlight! link cmakeKWctest_upload Cyan
-highlight! link cmakeKWdefine_property Cyan
-highlight! link cmakeKWdoxygen_add_docs Cyan
-highlight! link cmakeKWenable_language Cyan
-highlight! link cmakeKWenable_testing Cyan
-highlight! link cmakeKWexec_program Cyan
-highlight! link cmakeKWexecute_process Cyan
-highlight! link cmakeKWexport Cyan
-highlight! link cmakeKWexport_library_dependencies Cyan
-highlight! link cmakeKWfile Cyan
-highlight! link cmakeKWfind_file Cyan
-highlight! link cmakeKWfind_library Cyan
-highlight! link cmakeKWfind_package Cyan
-highlight! link cmakeKWfind_path Cyan
-highlight! link cmakeKWfind_program Cyan
-highlight! link cmakeKWfltk_wrap_ui Cyan
-highlight! link cmakeKWforeach Cyan
-highlight! link cmakeKWfunction Cyan
-highlight! link cmakeKWget_cmake_property Cyan
-highlight! link cmakeKWget_directory_property Cyan
-highlight! link cmakeKWget_filename_component Cyan
-highlight! link cmakeKWget_property Cyan
-highlight! link cmakeKWget_source_file_property Cyan
-highlight! link cmakeKWget_target_property Cyan
-highlight! link cmakeKWget_test_property Cyan
-highlight! link cmakeKWif Cyan
-highlight! link cmakeKWinclude Cyan
-highlight! link cmakeKWinclude_directories Cyan
-highlight! link cmakeKWinclude_external_msproject Cyan
-highlight! link cmakeKWinclude_guard Cyan
-highlight! link cmakeKWinstall Cyan
-highlight! link cmakeKWinstall_files Cyan
-highlight! link cmakeKWinstall_programs Cyan
-highlight! link cmakeKWinstall_targets Cyan
-highlight! link cmakeKWlink_directories Cyan
-highlight! link cmakeKWlist Cyan
-highlight! link cmakeKWload_cache Cyan
-highlight! link cmakeKWload_command Cyan
-highlight! link cmakeKWmacro Cyan
-highlight! link cmakeKWmark_as_advanced Cyan
-highlight! link cmakeKWmath Cyan
-highlight! link cmakeKWmessage Cyan
-highlight! link cmakeKWoption Cyan
-highlight! link cmakeKWproject Cyan
-highlight! link cmakeKWqt_wrap_cpp Cyan
-highlight! link cmakeKWqt_wrap_ui Cyan
-highlight! link cmakeKWremove Cyan
-highlight! link cmakeKWseparate_arguments Cyan
-highlight! link cmakeKWset Cyan
-highlight! link cmakeKWset_directory_properties Cyan
-highlight! link cmakeKWset_property Cyan
-highlight! link cmakeKWset_source_files_properties Cyan
-highlight! link cmakeKWset_target_properties Cyan
-highlight! link cmakeKWset_tests_properties Cyan
-highlight! link cmakeKWsource_group Cyan
-highlight! link cmakeKWstring Cyan
-highlight! link cmakeKWsubdirs Cyan
-highlight! link cmakeKWtarget_compile_definitions Cyan
-highlight! link cmakeKWtarget_compile_features Cyan
-highlight! link cmakeKWtarget_compile_options Cyan
-highlight! link cmakeKWtarget_include_directories Cyan
-highlight! link cmakeKWtarget_link_directories Cyan
-highlight! link cmakeKWtarget_link_libraries Cyan
-highlight! link cmakeKWtarget_link_options Cyan
-highlight! link cmakeKWtarget_precompile_headers Cyan
-highlight! link cmakeKWtarget_sources Cyan
-highlight! link cmakeKWtry_compile Cyan
-highlight! link cmakeKWtry_run Cyan
-highlight! link cmakeKWunset Cyan
-highlight! link cmakeKWuse_mangled_mesa Cyan
-highlight! link cmakeKWvariable_requires Cyan
-highlight! link cmakeKWvariable_watch Cyan
-highlight! link cmakeKWwrite_file Cyan
 " }}}
 " Json: {{{
 highlight! link jsonKeyword Orange
@@ -1381,116 +869,6 @@ highlight! link helpSectionDelim Grey
 let g:limelight_conceal_guifg = s:palette.grey[0]
 let g:limelight_conceal_ctermfg = s:palette.bg4[1]
 " }}}
-" junegunn/vim-plug{{{
-call s:HL('plug1', s:palette.orange, s:palette.none, 'bold')
-call s:HL('plugNumber', s:palette.yellow, s:palette.none, 'bold')
-highlight! link plug2 Green
-highlight! link plugBracket Grey
-highlight! link plugName Cyan
-highlight! link plugDash Orange
-highlight! link plugError Red
-highlight! link plugNotLoaded Grey
-highlight! link plugRelDate Grey
-highlight! link plugH2 Orange
-highlight! link plugMessage Orange
-highlight! link plugStar Red
-highlight! link plugUpdate Blue
-highlight! link plugDeleted Grey
-highlight! link plugEdge Yellow
-highlight! link plugSha Green
-" }}}
-" neoclide/coc.nvim{{{
-call s:HL('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
-if s:configuration.current_word ==# 'bold'
-  call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'bold')
-elseif s:configuration.current_word ==# 'underline'
-  call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'underline')
-elseif s:configuration.current_word ==# 'italic'
-  call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'italic')
-elseif s:configuration.current_word ==# 'grey background'
-  call s:HL('CocHighlightText', s:palette.none, s:palette.bg2)
-endif
-highlight! link CocErrorSign RedSign
-highlight! link CocWarningSign YellowSign
-highlight! link CocInfoSign BlueSign
-highlight! link CocHintSign CyanSign
-highlight! link CocErrorHighlight ALEError
-highlight! link CocWarningHighlight ALEWarning
-highlight! link CocInfoHighlight ALEInfo
-highlight! link CocWarningVirtualText Grey
-highlight! link CocErrorVirtualText Grey
-highlight! link CocInfoVirtualText Grey
-highlight! link CocHintVirtualText Grey
-highlight! link CocCodeLens Grey
-highlight! link HighlightedyankRegion Visual
-highlight! link CocGitAddedSign GreenSign
-highlight! link CocGitChangeRemovedSign PurpleSign
-highlight! link CocGitChangedSign BlueSign
-highlight! link CocGitRemovedSign RedSign
-highlight! link CocGitTopRemovedSign RedSign
-highlight! link CocExplorerBufferRoot Orange
-highlight! link CocExplorerBufferExpandIcon Cyan
-highlight! link CocExplorerBufferBufnr Purple
-highlight! link CocExplorerBufferModified Red
-highlight! link CocExplorerBufferBufname Grey
-highlight! link CocExplorerBufferFullpath Grey
-highlight! link CocExplorerFileRoot Orange
-highlight! link CocExplorerFileExpandIcon Cyan
-highlight! link CocExplorerFileFullpath Grey
-highlight! link CocExplorerFileDirectory Green
-highlight! link CocExplorerFileGitStage Purple
-highlight! link CocExplorerFileGitUnstage Yellow
-highlight! link CocExplorerFileSize Blue
-highlight! link CocExplorerTimeAccessed Cyan
-highlight! link CocExplorerTimeCreated Cyan
-highlight! link CocExplorerTimeModified Cyan
-" }}}
-" dense-analysis/ale{{{
-call s:HL('ALEError', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
-call s:HL('ALEWarning', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
-call s:HL('ALEInfo', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
-highlight! link ALEErrorSign RedSign
-highlight! link ALEWarningSign YellowSign
-highlight! link ALEInfoSign BlueSign
-highlight! link ALEVirtualTextError Grey
-highlight! link ALEVirtualTextWarning Grey
-highlight! link ALEVirtualTextInfo Grey
-highlight! link ALEVirtualTextStyleError Grey
-highlight! link ALEVirtualTextStyleWarning Grey
-" }}}
-" neomake/neomake{{{
-highlight! link NeomakeError ALEError
-highlight! link NeomakeErrorSign RedSign
-highlight! link NeomakeWarning ALEWarning
-highlight! link NeomakeWarningSign YellowSign
-highlight! link NeomakeInfo ALEInfo
-highlight! link NeomakeInfoSign BlueSign
-highlight! link NeomakeMessage Cyan
-highlight! link NeomakeMessageSign CyanSign
-highlight! link NeomakeVirtualtextError Grey
-highlight! link NeomakeVirtualtextWarning Grey
-highlight! link NeomakeVirtualtextInfo Grey
-highlight! link NeomakeVirtualtextMessag Grey
-" }}}
-" vim-syntastic/syntastic{{{
-highlight! link SyntasticError ALEError
-highlight! link SyntasticWarning ALEWarning
-highlight! link SyntasticErrorSign RedSign
-highlight! link SyntasticWarningSign YellowSign
-" }}}
-" Yggdroot/LeaderF{{{
-call s:HL('Lf_hl_match', s:palette.green, s:palette.none, 'bold')
-call s:HL('Lf_hl_match0', s:palette.green, s:palette.none, 'bold')
-call s:HL('Lf_hl_match1', s:palette.cyan, s:palette.none, 'bold')
-call s:HL('Lf_hl_match2', s:palette.blue, s:palette.none, 'bold')
-call s:HL('Lf_hl_match3', s:palette.purple, s:palette.none, 'bold')
-call s:HL('Lf_hl_match4', s:palette.orange, s:palette.none, 'bold')
-call s:HL('Lf_hl_matchRefine', s:palette.red, s:palette.none, 'bold')
-highlight! link Lf_hl_cursorline Fg
-highlight! link Lf_hl_selection DiffAdd
-highlight! link Lf_hl_rgHighlight Visual
-highlight! link Lf_hl_gtagsHighlight Visual
-" }}}
 " junegunn/fzf.vim{{{
 let g:fzf_colors = {
       \ 'fg':      ['fg', 'Normal'],
@@ -1507,14 +885,6 @@ let g:fzf_colors = {
       \ 'header':  ['fg', 'Grey']
       \ }
 " }}}
-" Shougo/denite.nvim{{{
-call s:HL('deniteMatchedChar', s:palette.green, s:palette.none, 'bold')
-call s:HL('deniteMatchedRange', s:palette.green, s:palette.none, 'bold,underline')
-call s:HL('deniteInput', s:palette.green, s:palette.bg3, 'bold')
-call s:HL('deniteStatusLineNumber', s:palette.purple, s:palette.bg3)
-call s:HL('deniteStatusLinePath', s:palette.fg, s:palette.bg3)
-highlight! link deniteSelectedLin Green
-" }}}
 " kien/ctrlp.vim{{{
 call s:HL('CtrlPMatch', s:palette.green, s:palette.none, 'bold')
 call s:HL('CtrlPPrtBase', s:palette.bg3, s:palette.none)
@@ -1525,104 +895,15 @@ call s:HL('CtrlPStats', s:palette.grey, s:palette.bg3, 'bold')
 highlight! link CtrlPNoEntries Red
 highlight! link CtrlPPrtCursor Blue
 " }}}
-" majutsushi/tagbar{{{
-highlight! link TagbarFoldIcon Green
-highlight! link TagbarSignature Green
-highlight! link TagbarKind Red
-highlight! link TagbarScope Orange
-highlight! link TagbarNestedKind Cyan
-highlight! link TagbarVisibilityPrivate Red
-highlight! link TagbarVisibilityPublic Blue
-" }}}
-" liuchengxu/vista.vim{{{
-highlight! link VistaBracket Grey
-highlight! link VistaChildrenNr Orange
-highlight! link VistaScope Red
-highlight! link VistaTag Green
-highlight! link VistaPrefix Grey
-highlight! link VistaColon Green
-highlight! link VistaIcon Purple
-highlight! link VistaLineNr Fg
-" }}}
 " airblade/vim-gitgutter{{{
 highlight! link GitGutterAdd GreenSign
 highlight! link GitGutterChange BlueSign
 highlight! link GitGutterDelete RedSign
 highlight! link GitGutterChangeDelete PurpleSign
 " }}}
-" mhinz/vim-signify{{{
-highlight! link SignifySignAdd GreenSign
-highlight! link SignifySignChange BlueSign
-highlight! link SignifySignDelete RedSign
-highlight! link SignifySignChangeDelete PurpleSign
-" }}}
-" scrooloose/nerdtree{{{
-highlight! link NERDTreeDir Green
-highlight! link NERDTreeDirSlash Cyan
-highlight! link NERDTreeOpenable Orange
-highlight! link NERDTreeClosable Orange
-highlight! link NERDTreeFile Fg
-highlight! link NERDTreeExecFile Yellow
-highlight! link NERDTreeUp Grey
-highlight! link NERDTreeCWD Cyan
-highlight! link NERDTreeHelp LightGrey
-highlight! link NERDTreeToggleOn Green
-highlight! link NERDTreeToggleOff Red
-highlight! link NERDTreeFlags Orange
-highlight! link NERDTreeLinkFile Grey
-highlight! link NERDTreeLinkTarget Green
-" }}}
 " justinmk/vim-dirvish{{{
 highlight! link DirvishPathTail Cyan
 highlight! link DirvishArg Yellow
-" }}}
-" vim.org/netrw {{{
-" https://www.vim.org/scripts/script.php?script_id=1075
-highlight! link netrwDir Green
-highlight! link netrwClassify Green
-highlight! link netrwLink Grey
-highlight! link netrwSymLink Fg
-highlight! link netrwExe Yellow
-highlight! link netrwComment Grey
-highlight! link netrwList Cyan
-highlight! link netrwHelpCmd Blue
-highlight! link netrwCmdSep Grey
-highlight! link netrwVersion Orange
-" }}}
-" andymass/vim-matchup{{{
-call s:HL('MatchParenCur', s:palette.none, s:palette.none, 'bold')
-call s:HL('MatchWord', s:palette.none, s:palette.none, 'underline')
-call s:HL('MatchWordCur', s:palette.none, s:palette.none, 'underline')
-" }}}
-" easymotion/vim-easymotion {{{
-highlight! link EasyMotionTarget Search
-highlight! link EasyMotionShade Comment
-" }}}
-" justinmk/vim-sneak {{{
-highlight! link Sneak Cursor
-highlight! link SneakLabel Cursor
-highlight! link SneakScope DiffChange
-" }}}
-" terryma/vim-multiple-cursors{{{
-highlight! link multiple_cursors_cursor Cursor
-highlight! link multiple_cursors_visual Visual
-" }}}
-" mg979/vim-visual-multi{{{
-let g:VM_Mono_hl = 'Cursor'
-let g:VM_Extend_hl = 'Visual'
-let g:VM_Cursor_hl = 'Cursor'
-let g:VM_Insert_hl = 'Cursor'
-" }}}
-" dominikduda/vim_current_word{{{
-highlight! link CurrentWord CocHighlightText
-highlight! link CurrentWordTwins CocHighlightText
-" }}}
-" RRethy/vim-illuminate{{{
-highlight! link illuminatedWord CocHighlightText
-" }}}
-" itchyny/vim-cursorword{{{
-highlight! link CursorWord0 CocHighlightText
-highlight! link CursorWord1 CocHighlightText
 " }}}
 " nathanaelkane/vim-indent-guides{{{
 if get(g:, 'indent_guides_auto_colors', 1) == 0
@@ -1630,55 +911,11 @@ if get(g:, 'indent_guides_auto_colors', 1) == 0
   call s:HL('IndentGuidesEven', s:palette.bg0, s:palette.bg2)
 endif
 " }}}
-" luochen1990/rainbow{{{
-if !exists('g:rbpt_colorpairs')
-  let g:rbpt_colorpairs = [['blue', s:palette.blue[0]], ['magenta', s:palette.purple[0]],
-        \ ['red', s:palette.red[0]], ['166', s:palette.orange[0]]]
-endif
-
-let g:rainbow_guifgs = [ s:palette.orange[0], s:palette.red[0], s:palette.purple[0], s:palette.blue[0] ]
-let g:rainbow_ctermfgs = [ '166', 'red', 'magenta', 'blue' ]
-
-if !exists('g:rainbow_conf')
-  let g:rainbow_conf = {}
-endif
-if !has_key(g:rainbow_conf, 'guifgs')
-  let g:rainbow_conf['guifgs'] = g:rainbow_guifgs
-endif
-if !has_key(g:rainbow_conf, 'ctermfgs')
-  let g:rainbow_conf['ctermfgs'] = g:rainbow_ctermfgs
-endif
-
-let g:niji_dark_colours = g:rbpt_colorpairs
-let g:niji_light_colours = g:rbpt_colorpairs
-" }}}
-" kshenoy/vim-signature {{{
-highlight! link SignatureMarkText BlueSign
-highlight! link SignatureMarkerText PurpleSign
-" }}}
-" mhinz/vim-startify{{{
-highlight! link StartifyBracket Grey
-highlight! link StartifyFile Fg
-highlight! link StartifyNumber Red
-highlight! link StartifyPath Green
-highlight! link StartifySlash Green
-highlight! link StartifySection Blue
-highlight! link StartifyHeader Orange
-highlight! link StartifySpecial Grey
-highlight! link StartifyFooter Grey
-" }}}
 " ap/vim-buftabline{{{
 highlight! link BufTabLineCurrent TabLineSel
 highlight! link BufTabLineActive TabLine
 highlight! link BufTabLineHidden TabLineFill
 highlight! link BufTabLineFill TabLineFill
-" }}}
-" liuchengxu/vim-which-key{{{
-highlight! link WhichKey Red
-highlight! link WhichKeySeperator Green
-highlight! link WhichKeyGroup Yellow
-highlight! link WhichKeyDesc Blue
-highlight! link WhichKeyFloating SignColumn
 " }}}
 " skywind3000/quickmenu.vim{{{
 highlight! link QuickmenuOption Green
@@ -1699,13 +936,6 @@ highlight! link UndotreeHead Yellow
 highlight! link UndotreeBranch Yellow
 highlight! link UndotreeCurrent Cyan
 highlight! link UndotreeSavedSmall Purple
-" }}}
-" unblevable/quick-scope {{{
-call s:HL('QuickScopePrimary', s:palette.cyan, s:palette.none, 'underline')
-call s:HL('QuickScopeSecondary', s:palette.blue, s:palette.none, 'underline')
-" }}}
-" APZelos/blamer.nvim {{{
-highlight! link Blamer Grey
 " }}}
 " }}}
 " Terminal: {{{
