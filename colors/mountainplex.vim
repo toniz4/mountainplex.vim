@@ -30,6 +30,7 @@ let s:palette = {
       \ 'bg_blue':    ['#0f0f0f',   '17',   'DarkBlue'],
       \ 'fg':         ['#f0f0f0',   '223',  'White'],
       \ 'red':        ['#AC8A8C',   '167',  'Red'],
+      \ 'brred':      ['#c37474',   '167',  'Red'],
       \ 'orange':     ['#AC9D8A',   '208',  'Red'],
       \ 'yellow':     ['#ACA98A',   '214',  'Yellow'],
       \ 'green':      ['#8AAC8B',   '108',  'Green'],
@@ -37,7 +38,6 @@ let s:palette = {
       \ 'blue':       ['#8F8AAC',   '109',  'Blue'],
       \ 'purple':     ['#AC8AAC',   '175',  'Magenta'],
       \ 'grey':       ['#363636',   '245',  'LightGrey'],
-      \ 'light_grey': ['#363636',   '245',  'LightGrey'],
       \ 'gold':       ['#2f4243',   '214',  'Yellow'],
       \ 'none':       ['NONE',      'NONE', 'NONE']
       \ }
@@ -160,7 +160,7 @@ call s:HL('DiffChange', s:palette.none, s:palette.bg_blue)
 call s:HL('DiffDelete', s:palette.none, s:palette.bg_red)
 call s:HL('DiffText', s:palette.none, s:palette.bg0, 'reverse')
 call s:HL('Directory', s:palette.green, s:palette.none)
-call s:HL('ErrorMsg', s:palette.red, s:palette.none, 'bold,underline')
+call s:HL('ErrorMsg', s:palette.brred, s:palette.none, 'bold,underline')
 call s:HL('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
 call s:HL('ModeMsg', s:palette.fg, s:palette.none, 'bold')
 call s:HL('MoreMsg', s:palette.blue, s:palette.none, 'bold')
@@ -193,6 +193,9 @@ call s:HL('ToolbarLine', s:palette.none, s:palette.grey)
 call s:HL('ToolbarButton', s:palette.fg, s:palette.bg0, 'bold')
 call s:HL('QuickFixLine', s:palette.blue, s:palette.bg1)
 call s:HL('Debug', s:palette.yellow, s:palette.none)
+call s:HL('LspDiagnosticsDefaultError ', s:palette.brred, s:palette.none, 'bold')
+call s:HL('LspDiagnosticsDefaultWarning ', s:palette.red, s:palette.none)
+call s:HL('LspDiagnosticsDefaultNormal', s:palette.none, s:palette.none)
 " }}}
 " Syntax: {{{
 call s:HL('Boolean', s:palette.purple, s:palette.none)
@@ -221,7 +224,7 @@ else
   call s:HL('Exception', s:palette.red, s:palette.none)
   call s:HL('Statement', s:palette.red, s:palette.none)
 endif
-call s:HL('Error', s:palette.red, s:palette.none)
+call s:HL('Error', s:palette.brred, s:palette.none)
 call s:HL('StorageClass', s:palette.orange, s:palette.none, 'bold')
 call s:HL('Tag', s:palette.orange, s:palette.none)
 call s:HL('Label', s:palette.orange, s:palette.none)
@@ -239,12 +242,12 @@ call s:HL('Macro', s:palette.cyan, s:palette.none)
 call s:HL('Identifier', s:palette.blue, s:palette.none)
 call s:HL('SpecialKey', s:palette.blue, s:palette.none)
 if s:configuration.disable_italic_comment
-  call s:HL('Comment', s:palette.light_grey, s:palette.none)
-  call s:HL('SpecialComment', s:palette.light_grey, s:palette.none)
+  call s:HL('Comment', s:palette.grey, s:palette.none)
+  call s:HL('SpecialComment', s:palette.grey, s:palette.none)
   call s:HL('Todo', s:palette.purple, s:palette.none)
 else
-  call s:HL('Comment', s:palette.light_grey, s:palette.none, 'italic')
-  call s:HL('SpecialComment', s:palette.light_grey, s:palette.none, 'italic')
+  call s:HL('Comment', s:palette.grey, s:palette.none, 'italic')
+  call s:HL('SpecialComment', s:palette.grey, s:palette.none, 'italic')
   call s:HL('Todo', s:palette.purple, s:palette.none, 'italic')
 endif
 call s:HL('Delimiter', s:palette.fg, s:palette.none)
