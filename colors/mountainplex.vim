@@ -78,7 +78,7 @@ hi! link TermCursor Cursor
 "  GROUP      FG    BG    GUI
 Hi Directory  blue   NONE   NONE
 Hi Error      red    NONE   bold
-Hi Folded     bg1    NONE   NONE
+Hi Folded     grey   NONE   NONE
 Hi IncSearch  bg0    yellow NONE
 Hi MatchParen yellow bg1    bold
 Hi NonText    bg0    bg0    NONE
