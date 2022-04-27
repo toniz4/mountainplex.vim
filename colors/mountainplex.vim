@@ -26,6 +26,7 @@ let s:palette = {
       \ 'lgrey':      '#2F4243',
       \ 'red':        '#C37474',
       \ 'yellow':     '#D28846',
+      \ 'lyellow':    '#ACA98A',
       \ 'green':      '#8AAC8B',
       \ 'cyan':       '#8AABAC',
       \ 'blue':       '#8F8AAC',
@@ -99,12 +100,17 @@ Hi Type       NONE    NONE  bold
 Hi Comment    grey    NONE  italic
 Hi String     green   NONE  NONE
 Hi Special    purple  NONE  NONE
-Hi Constant   NONE    NONE  NONE
+Hi Constant   lyellow NONE  NONE
 Hi Identifier NONE    NONE  NONE
 Hi Ignore     NONE    NONE  NONE
 Hi Statement  NONE    NONE  NONE
 Hi PreProc    NONE    NONE  NONE
 Hi Delimiter  NONE    NONE  NONE
+
+hi! link Character Normal
+hi! link Number Normal
+hi! link Boolean Normal
+hi! link Float Normal
 
 " User colors
 hi! link User1 StatusLine
