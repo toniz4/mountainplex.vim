@@ -26,7 +26,7 @@ let s:palette = {
       \ 'lgrey':      '#2F4243',
       \ 'red':        '#C37474',
       \ 'yellow':     '#D28846',
-      \ 'lyellow':    '#ACA98A',
+      \ 'lyellow':    '#bab8ab',
       \ 'green':      '#8AAC8B',
       \ 'cyan':       '#8AABAC',
       \ 'blue':       '#8F8AAC',
